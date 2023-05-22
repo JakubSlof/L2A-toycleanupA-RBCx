@@ -124,7 +124,22 @@ void setup() {
             break;
         case 9:
             state = 10;
-            forward(1000);
+            arm_drivemode();
+        forward(1950);
+        turn_by_wall();
+        forward(500);
+        turn(-90);
+        back_button();
+        //jizda pro kostku
+        forward(800);
+        back_button();
+        //jizda zpet
+        forward(220);
+        turn(93);
+        back_button();
+        forward(50);
+        turn(75);
+        back_button();
             state = 11;
             break;
         case 11:
@@ -175,14 +190,5 @@ void setup() {
         }
     }
         
-        //rkServosSetPosition(1, 90);x
-        //rkServosSetPosition(2, 0);
-        //delay(2000);
-        //while (true)
-        //{       
-        //servoBus.set(0, 240_deg, 200.f, 1.f);
-        //delay(2000);
-        //servoBus.set(0, 0_deg, 200.f, 1.f);
-        //delay(2000);
-        //}
+        
 }
